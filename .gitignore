@@ -1,0 +1,14 @@
+# the proprietary data pack and anything derived from it at ball level must never be committed
+data/
+draft/
+analysis/out/
+*.csv.gz
+*.parquet
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
