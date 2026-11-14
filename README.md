@@ -35,8 +35,9 @@ bootstrap resamples in which the player stays in the top 10):
 The top four on each list are firm (74-94%). Ranks 5-10 are close contests (33-67%); the next-best players (Kohli and
 Shashank Singh among batters; Pathirana, Hasaranga and Hazlewood among bowlers) are close behind.
 
-The ranking is purely performance-based. If availability rules out Karthik (reported retired) and the two Pakistani bowlers,
-Abrar Ahmed and Mohammad Nawaz (not IPL-eligible in practice), two replacement rules are provided:
+The ranking is purely performance-based. The organisers confirmed that all players in the dataset are eligible regardless of
+nationality, capped status, franchise or auction availability, so no one is excluded. For practical reference only, if Karthik
+(reported retired) and the two Pakistani bowlers, Abrar Ahmed and Mohammad Nawaz, were unobtainable, two replacement rules are provided:
 
 1. **Next in the overall ranking:** Virat Kohli (batters); Matheesha Pathirana and Wanindu Hasaranga (bowlers).
 2. **Like-for-like (same role, IPL-proven):** Kohli and Shashank Singh for Karthik; Hasaranga and Noor Ahmad for the two spinners.
@@ -61,7 +62,7 @@ Abrar Ahmed and Mohammad Nawaz (not IPL-eligible in practice), two replacement r
 9. **Evidence-quality flags.** The share of each player's pressure balls against associate or A-team opposition.
 10. **Team-level diagnostics from the same engine.** Win probability gained and lost per match by phase, for every
     franchise, reconciled to actual results.
-11. **Availability layer.** The ranking is purely performance-based; each ranked player additionally carries an availability
+11. **Availability layer (supplementary, not used in ranking).** Each ranked player additionally carries an availability
     flag, like-for-like same-role alternates, and a next-in-ranking fallback order if flagged players are unavailable.
 
 ---
@@ -181,7 +182,7 @@ about 53% expected vs 51.3% actual over 76 IPL matches).
 - Some players' evidence is mostly T20I or associate-level (Muqeem 30% against associate / A-team sides).
 - The batter backtest rests on 40-46 players per test and is mixed.
 - Franchise diagnostics rest on 76 IPL matches for Rajasthan Royals.
-- Nationality, retirement and eligibility flags come from public knowledge, not from the data pack, which holds no contracts, purses or retentions.
+- Nationality, retirement and eligibility flags are supplementary, play no role in the rankings, and come from public knowledge, not from the data pack, which holds no contracts, purses or retentions.
 
 ---
 
