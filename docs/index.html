@@ -238,7 +238,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   <section id="rr" class="tab"></section>
   <section id="method" class="tab"></section>
 </main>
-<footer><div class="wrap">Built by Nithish Ra for SupeRR Selector Season 2 (Round 1). Shows aggregated results only; derived from the Rajasthan Royals data pack, which is proprietary and not redistributed. Availability flags are supplementary, come from public knowledge, and play no role in the ranking.</div></footer>
+<footer><div class="wrap">Built by Nithish Ra for SupeRR Selector Season 2 (Round 1). Shows aggregated results only; derived from the Rajasthan Royals data pack, which is proprietary and not redistributed. Availability flags come from public knowledge and need verification against the official auction list.</div></footer>
 <div id="tip" role="tooltip"></div>
 <div id="pal" role="dialog" aria-label="Search players"><div class="pal"><input id="q" placeholder="Search a player… (Esc to close)" autocomplete="off"><ul id="res"></ul></div></div>
 
@@ -496,7 +496,7 @@ function goPlayer(role, i) { S.sel[role] = i; setRole(role); show("rankings"); }
   });
   root.append(lists);
   const f = D.fallback;
-  root.append(el("div", { class: "callout reveal", style: "margin-top:16px" }, el("b", {}, "Eligibility and availability. "), "Per the organisers' clarification, every player in the dataset is eligible regardless of nationality, retirement, franchise or auction availability, so the ranking excludes no one. For practical reference only (not part of the ranking), if Dinesh Karthik (reported retired) and the Pakistani bowlers Abrar Ahmed and Mohammad Nawaz were unobtainable: ",
+  root.append(el("div", { class: "callout reveal", style: "margin-top:16px" }, el("b", {}, "Availability fallback. "), "The ranking is purely performance-based. If Dinesh Karthik (reported retired) and the Pakistani bowlers Abrar Ahmed and Mohammad Nawaz (not IPL-eligible in practice) are unavailable: ",
     el("b", {}, "(1) next in the overall ranking"), ` – ${f.nextBat.join(", ")} (batters), ${f.nextBowl.join(" and ")} (bowlers); `, el("b", {}, "(2) like-for-like, same role and IPL-proven"), ` – for Karthik, ${f.altBat}; for the two spinners, ${f.altBowl}.`));
   root.append(secHead("Four things to know"));
   root.append(el("div", { class: "grid g4" },
@@ -669,8 +669,8 @@ function goPlayer(role, i) { S.sel[role] = i; setRole(role); show("rankings"); }
 /* ---------- AVAILABILITY ---------- */
 (function () {
   const root = $("#availability"), f = D.fallback;
-  root.append(secHead("Practical note: auction availability (not part of the ranking)"));
-  root.append(el("p", { class: "sub", style: "max-width:760px" }, "The ranking is purely performance-based, and the organisers have confirmed that all players in the dataset are eligible irrespective of nationality, capped status, franchise or auction availability. This tab is supplementary and affects no rank. Flagged players carry pre-selected alternates; flags come from public knowledge, not the data pack."));
+  root.append(secHead("Auction reality check"));
+  root.append(el("p", { class: "sub", style: "max-width:760px" }, "The ranking is purely performance-based, as the brief asks. Players with an availability question carry a flag and pre-selected replacements. Flags come from public knowledge, not the data pack, and must be checked against the official auction list."));
   root.append(el("div", { class: "grid g2" },
     card("1 · Next in the overall ranking", "If the flagged players are skipped, these enter the top 10.", el("p", {}, el("b", {}, "Batters: "), f.nextBat.join(", ")), el("p", {}, el("b", {}, "Bowlers: "), f.nextBowl.join(" and "))),
     card("2 · Like-for-like (same role, IPL-proven)", "The next-best players outside the top 10 in the same role (same pace/spin type for bowlers) with real IPL pressure evidence.", el("p", {}, el("b", {}, "For Karthik: "), f.altBat), el("p", {}, el("b", {}, "For the two spinners: "), f.altBowl))));
@@ -739,7 +739,7 @@ function goPlayer(role, i) { S.sel[role] = i; setRole(role); show("rankings"); }
       "Opposition and batting position are controlled only through phase and match tier; some players' evidence is mostly T20I or associate-level.",
       "The batter backtest is mixed and rests on 40–46 players per test.",
       "RR diagnostics rest on 76 IPL matches: indicative, not precise.",
-      "Availability and nationality flags are supplementary, come from public knowledge, and play no role in the ranking."].map(t => el("li", { style: "margin:6px 0" }, t))))));
+      "Availability and nationality flags come from public knowledge and must be verified."].map(t => el("li", { style: "margin:6px 0" }, t))))));
   root.append(el("div", { class: "callout reveal", style: "margin-top:16px" }, el("b", {}, "Data note. "), "This page shows aggregated results only. The Rajasthan Royals data pack was provided for the competition, is proprietary, and is not redistributed here."));
 })();
 
