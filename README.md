@@ -10,7 +10,7 @@ The write-up is in `SupeRR_Round1_Report.pdf`. This file documents the system it
 > **Data note.** The data pack is proprietary and was provided for the competition only. This project contains code and
 > derived results; the raw pack and the ball-level intermediate tables are not part of what is shared.
 
-**Links.** Live dashboard: https://nithish-ra.github.io/reliable-under-pressure/ · Code and method: https://github.com/nithish-ra/reliable-under-pressure
+**Links.** Live dashboard: https://nithish-ra.github.io/reliable-under-pressure/ · Code and method: https://github.com/nithish-ra/reliable-under-pressure · Video walkthrough: https://drive.google.com/file/d/1qqTnCi7Rh9NWhAinxVIhbp0PeOLMPN8w/view?usp=sharing
 
 ---
 
